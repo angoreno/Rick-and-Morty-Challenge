@@ -14,6 +14,7 @@ public class CharacterSchema {
     private String[] episode;
     private String url;
 
+
     public int getId() {
         return id;
     }

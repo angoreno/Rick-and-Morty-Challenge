@@ -1,7 +1,7 @@
 package com.rickmorty.rmdesafio.controller;
 
 
-import com.rickmorty.rmdesafio.dto.RootObjectSchema;
+import com.rickmorty.rmdesafio.controller.dto.RootObjectSchema;
 import com.rickmorty.rmdesafio.service.RickMortyService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -15,8 +15,7 @@ public class ControllerRickMorty {
     private RickMortyService rickMortyService;
 
     @RequestMapping("/api/{id}")
-    public RootObjectSchema rickMortyapi(@PathVariable("id") int id){
-        RootObjectSchema resp = rickMortyService.rickMortyService(id);
-        return resp;
+    public RootObjectSchema rickMortyapi(@PathVariable("id") int id) {
+        return rickMortyService.rickMortyService(id);
     }
 }
